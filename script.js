@@ -33,3 +33,19 @@ window.addEventListener("scroll", () => {
     });
 
 });
+
+document.addEventListener("click", function(event){
+
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+    const navbarToggler = document.querySelector(".navbar-toggler");
+
+    const isClickInsideMenu = navbarCollapse.contains(event.target);
+    const isClickOnButton = navbarToggler.contains(event.target);
+
+    if(!isClickInsideMenu && !isClickOnButton){
+
+        navbarCollapse.classList.remove("show");
+
+    }
+
+});
