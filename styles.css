@@ -16,17 +16,18 @@ body{
     padding: 5px 0;
     background: rgba(0,0,0,0.7);
     backdrop-filter: blur(10px);
+    min-height: 60px;
 }
 
 .logo-image{
-    width: 70px;
+    width: 50px;
     height: auto;
 }
 
 .nav-custom-link{
     color: #ffffff !important;
     margin-left: 25px;
-    font-size: 16px;
+    font-size: 15px;
     transition: 0.3s;
 }
 
@@ -36,34 +37,57 @@ body{
 
 @media(max-width:991px){
 
+    .custom-navbar{
+        padding:2px 0;
+    }
+
+    .logo-image{
+        width:45px;
+    }
+
     .navbar-collapse{
-
-        position: fixed;
-
-        top: 0;
-        right: -300px;
-
-        width: 300px;
-        height: 100vh;
-
-        padding-top: 80px;
-
-        transition: 0.4s ease;
-
-        background: transparent;
-        backdrop-filter: blur(10px);
+        position:fixed;
+        top:70px;
+        right:-260px;
+        width:240px;
+        padding:20px;
+        background:rgba(11,11,11,.96);
+        backdrop-filter:blur(15px);
+        border-radius:15px 0 0 15px;
+        transition:.4s;
+        box-shadow:-5px 0 25px rgba(0,0,0,.4);
     }
 
     .navbar-collapse.show{
-        right: 0;
+        right:0;
     }
 
-}
+    .navbar-nav{
+        align-items:center;
+        text-align:center;
+        width:100%;
+    }
 
+    .nav-item{
+        width:100%;
+        text-align: center;
+    }
+
+    .nav-custom-link{
+        margin-left:0;
+        padding:10px 0;
+        display:block;
+    }
+
+    .custom-btn{
+        width:100%;
+        margin-top:10px;
+    }
+}
 .custom-btn{
     background-color: #D4AF37;
     color: #000;
-    padding: 10px 22px;
+    padding: 8px 18px;
     border-radius: 30px;
     font-weight: 600;
     transition: 0.3s;
@@ -72,6 +96,22 @@ body{
 .custom-btn:hover{
     background-color: #FFD700;
     transform: translateY(-3px);
+}
+
+.menu-close-btn{
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:20px;
+    display:flex;
+    justify-content:flex-end;
+    width:100%;
+    margin-bottom:10px;
+    cursor:pointer;
+}
+
+.menu-close-btn:hover{
+    color:#D4AF37;
 }
 
 /* ================= MOBILE MENU ICON ================= */
@@ -85,7 +125,7 @@ body{
 
 .navbar-toggler i{
     color:#ffffff;
-    font-size:38px;
+    font-size:30px;
 }
 
 /* ================= HERO SECTION ================= */
@@ -533,20 +573,25 @@ body{
 
 /* -------- RESPONSIVE -------- */
 
-@media(max-width: 992px){
+@media (max-width: 768px){
+
+    .skills-section .col-6,
+    .skills-section .col-md-4,
     .skills-section .col-lg-3{
         flex: 0 0 50%;
         max-width: 50%;
     }
 }
 
-@media(max-width: 576px){
+@media (max-width: 480px){
+
+    .skills-section .col-6,
+    .skills-section .col-md-4,
     .skills-section .col-lg-3{
-        flex: 0 0 100%;
-        max-width: 100%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }
-
 /* ================= HOME PROJECT SECTION ================= */
 
 .home-project-section{
@@ -1019,3 +1064,76 @@ body{
     text-transform: uppercase;
 }
 
+.back-to-top{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#D4AF37;
+    color:#000;
+
+    font-size:22px;
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:0 5px 20px rgba(212,175,55,.4);
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(20px);
+
+    transition:.3s ease;
+
+    z-index:999;
+}
+
+.back-to-top.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.back-to-top:hover{
+    transform:translateY(-4px);
+}
+
+@media(max-width:768px){
+
+    .back-to-top{
+        width:45px;
+        height:45px;
+        right:15px;
+        bottom:15px;
+        font-size:18px;
+    }
+
+}
+
+/* ===== Ultra Thin Scrollbar ===== */
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 3px;   /* ultra thin */
+}
+
+::-webkit-scrollbar-track {
+    background: #0B0B0B;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.7);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+}

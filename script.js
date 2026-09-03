@@ -49,3 +49,31 @@ document.addEventListener("click", function(event){
     }
 
 });
+
+const closeBtn = document.getElementById("closeMenu");
+const navbarCollapse = document.getElementById("navbarNav");
+
+closeBtn.addEventListener("click", () => {
+    navbarCollapse.classList.remove("show");
+});
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 300){
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+
+});
+
+backToTop.addEventListener("click", () => {
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});

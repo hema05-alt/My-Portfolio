@@ -1,12 +1,21 @@
-var typed = new Typed(".project-typing", {
+document.addEventListener("DOMContentLoaded", function () {
 
-    strings: [
-        "Travelsy Website"
-    ],
+    const projectTyping = document.querySelector(".project-typing");
 
-    typeSpeed: 100,
-    backSpeed: 40,
-    loop: true
+    if (projectTyping) {
 
+        new Typed(".project-typing", {
+
+            strings: [
+                "Travelsy Website"
+            ],
+
+            typeSpeed: 100,
+            backSpeed: 40,
+            loop: true
+
+        });
+
+    }
 
 });

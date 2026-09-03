@@ -383,3 +383,18 @@ body{
     }
 
 }
+
+/* QMC / EDUCATION BADGE */
+
+.qmc-badge{
+    background-color: #8B5CF6 !important;
+    color: #ffffff !important;
+}
+
+
+/* TASKMATE BADGE */
+
+.taskmate-badge{
+    background-color: #06B6D4 !important;
+    color: #ffffff !important;
+}
